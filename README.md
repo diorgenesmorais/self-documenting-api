@@ -9,3 +9,7 @@ Esta aplicação é uma API REST construída com Fastify, que utiliza o Zod para
 - src/types.ts: Define o tipo FastifyTypedInstance, que é uma instância do Fastify configurada para usar o Zod como provedor de tipos.
 
 O propósito principal da aplicação é fornecer uma API REST auto-documentada para gerenciar usuários, com validação de dados e documentação automática.
+
+## Acesse a documentação [swagger](http://localhost:3000/docs) pelo navegador em `/docs`
+
+## Também é possível obter o swagger em [JSON](http://localhost:3000/docs/json) para o [editor.swagger.io](https://editor.swagger.io) em `/docs/json`
