@@ -37,6 +37,10 @@ app.register(fastifySwaggerUi, {
 
 app.register(routes);
 
-app.listen({ port: PORT }).then(() => {
-    console.log(`Server is running on port: ${PORT}`);
-});
+app.listen({ port: PORT, host: '0.0.0.0' })
+    .then(() => {
+        console.log(`Server is running on port: ${PORT}`);
+    })
+    .catch((err) => {
+        console.error('Error starting server:', err);
+    });
