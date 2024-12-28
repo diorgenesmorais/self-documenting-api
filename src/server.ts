@@ -9,10 +9,7 @@ import {
 import { fastifySwagger } from "@fastify/swagger";
 import { fastifySwaggerUi } from "@fastify/swagger-ui";
 import { routes } from "./routes";
-import dotenv from 'dotenv';
 import { z } from 'zod';
-
-dotenv.config();
 
 const PORT = Number(process.env.PORT) || 3000;
 
