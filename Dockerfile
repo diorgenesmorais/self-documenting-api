@@ -29,7 +29,6 @@ COPY package*.json pnpm-lock.yaml ./
 RUN pnpm install --prod
 
 COPY --from=builder /usr/app/dist ./dist
-COPY --from=builder /usr/app/.env.prd ./
 
 USER node
 

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx watch --env-file .env src/server.ts",
     "build": "tsc",
-    "start": "node --env-file .env.prd dist/server.js"
+    "start:local": "node --env-file .env.prd dist/server.js",
+    "start": "node dist/server.js",
+    "deploy": "gcloud run deploy self-documenting-api --source=. --region us-central1 --env-vars-file=.env.prd.yaml"
   },
   "keywords": [],
   "author": "",

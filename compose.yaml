@@ -5,4 +5,6 @@ services:
         ports:
             - "8080:8080"
         container_name: app_users
-        command: pnpm run start
+        command: node --env-file /.env.prd dist/server.js
+        volumes:
+            - ./.env.prd:/.env.prd
