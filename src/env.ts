@@ -7,7 +7,7 @@ const envSchema = z.object({
         .refine((val) => val > 0 && val < 65536, {
             message: "The PORT must be a number between 1 and 65535"
         }),
-    NODE_ENV: z.enum(["development", "production", "test"]),
+    NODE_ENV: z.enum(["development", "production", "test"]).default('development')
 });
 
 const _env = envSchema.safeParse(process.env);
