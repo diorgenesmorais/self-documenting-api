@@ -11,7 +11,7 @@ import { fastifySwaggerUi } from "@fastify/swagger-ui";
 import { routes } from "./routes";
 import { env } from "./env";
 
-const PORT = env.PORT as number;
+const { PORT } = env;
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 app.setValidatorCompiler(validatorCompiler);
